@@ -1,0 +1,33 @@
+.jumbotron{
+  background-image: url('http://cdn.wallpapersafari.com/19/0/9bfUGI.png');
+  background-size: cover;
+  background-position: center ;
+  background-image: no-repeat;
+  height: 50pc;
+}
+
+
+#time-remaining {
+	position: relative;
+    left: -19pc;
+    top: 6pc;
+   font-size: 3pc;
+   color: white;
+}
+
+#show-time {
+	position: relative;
+    left: -19pc;
+    top: 6pc;
+   font-size: 3pc;
+   color: white;
+}
+
+#questions {
+	position: relative;
+    top: 7pc;
+    color: white;
+    left: -12pc;
+    font-size: 3pc;
+
+}

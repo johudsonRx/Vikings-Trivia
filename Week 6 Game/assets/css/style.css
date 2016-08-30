@@ -1,0 +1,47 @@
+.jumbotron{
+  background-image: url('http://www.beamovieextra.com/wp-content/uploads/2016/07/vikings-history-channel.jpg');
+  background-size: cover;
+  background-position: center ;
+  background-image: no-repeat;
+  height: 50pc;
+}
+
+
+h2 {
+      position: relative;
+    bottom: -8pc;
+    left: -15pc;
+    color: #FFC107;
+}
+
+img {
+    position: relative;
+    left: 12pc;
+}
+
+button {
+    color: #FFCC00;
+    background-color: transparent;
+    border-color: #FFCC00;
+    position: relative;
+    left: 14pc;
+    top: 3pc;
+    padding: 15px;
+    font-size: larger;
+    border: solid;
+
+}
+
+strong {
+  color: #FFCC00;
+ position: relative;
+    left: 0pc;
+    font-size: 6pc
+
+}
+
+button {
+  position: relative;
+    top: 11pc;
+    left: -11pc;v
+}
