@@ -1,0 +1,68 @@
+.jumbotron{
+  background-image: url('http://cdn.wallpapersafari.com/19/0/9bfUGI.png');
+  background-size: cover;
+  background-position: center ;
+  background-image: no-repeat;
+  height: 50pc;
+}
+
+
+#time-remaining {
+	position: relative;
+    left: -19pc;
+    top: -2pc;
+   font-size: 3pc;
+   color: white;
+}
+
+#show-time {
+   position: relative;
+    top: -6pc;
+    left: 5pc;
+   font-size: 3pc;
+   color: white;
+}
+
+#questions {
+	   position: relative;
+    left: -11pc;
+    top: -2pc;
+  color: white;
+  }
+
+#answerchoices {
+  position: relative;
+    bottom: 3pc;
+    left: -12pc;
+}
+
+ul {
+  position: relative;
+    left: 28pc;
+    top: -10pc;
+}
+
+
+li {
+  list-style-type: none;
+      margin-bottom: 13px;
+}
+
+img {
+      width: 368px;
+      height: 211px;
+    top: 0pc;
+    left: -14pc;
+    position: relative;
+
+}
+
+h3 {
+
+}
+
+
+#restart {
+  position: relative;
+    left: -12pc;
+}
