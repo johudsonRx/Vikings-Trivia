@@ -38,105 +38,106 @@ var redo;
 
 choice.hide();
 
-function displayNumber(){
+        function displayNumber(){
             $('#show-time').html(number + " " + "Seconds");
 
         }
 
     
 // Resets it the display to 30 seconds again.
-function reset(){
-	number = startAt;
-	displayNumber();
-}
+      function reset(){
+	         number = startAt;
+	         displayNumber();
+        }
 
 
 
-function run(){
-	counter = setInterval(decrement, 1000);
-}
+      function run(){
+	       counter = setInterval(decrement, 1000);
+        }
 
-function decrement(){
+      function decrement(){
 	
-	number--
-console.log("down");
+  	   number--
+       console.log("down");
 
- displayNumber();
+      displayNumber();
 	
 	
 
-	if(number === 0){
-    reset(); 
-    stop();
-    showTime.html("Time's Up!");
-    nextQuestion();
+	     if(number === 0){
+       reset(); 
+       stop();
+       showTime.html("Time's Up!");
+       nextQuestion();
 
-    questionIndex += 1;
+       questionIndex += 1;
 
-    losses ++;
+       losses ++;
 
-	}
-}
+	    }
+     }  
 
-function stop() {
-clearInterval(counter);
-showTime.empty();
-number = 30;
-}
+      function stop() {
+      clearInterval(counter);
+      console.log('stopping');
+        showTime.empty();
+      number = 30;
+      }
 
-  function fullTimer() {
-
-
-
-run();
+      function fullTimer() {
 
 
-}
+
+      run();
+
+
+      }
 
 // fullTimer();
 // ===================================Content===================================================================================
 
-function question(text, choices, answer, image){
-this.text = text;
-this.choices = choices;
-this.answer = answer;
-this.image = image
+              function question(text, choices, answer, image){
+              this.text = text;
+              this.choices = choices;
+              this.answer = answer;
+              this.image = image
 
-this.displayQuestion = function(){
+              this.displayQuestion = function(){
 
-   questionsElement.html(this.text);
+               questionsElement.html(this.text);
 
-            
+                        
 
-            choice1.html(this.choices[0]);
-            choice1.data('choice', this.choices[0] );
+                        choice1.html(this.choices[0]);
+                        choice1.data('choice', this.choices[0] );
 
-            choice2.html(this.choices[1]);
-            choice2.data('choice', this.choices[1] );
+                        choice2.html(this.choices[1]);
+                        choice2.data('choice', this.choices[1] );
 
-            choice3.html(this.choices[2]);
-            choice3.data('choice', this.choices[2] );
+                        choice3.html(this.choices[2]);
+                        choice3.data('choice', this.choices[2] );
 
-            choice4.html(this.choices[3]);
-            choice4.data('choice', this.choices[3] );
+                        choice4.html(this.choices[3]);
+                        choice4.data('choice', this.choices[3] );
 
-     }
+                 }
 
-this.displayImage = function(){
-     
-     images.html(this.image);
-         
-}
+              this.displayImage = function(){
+                 
+                 images.html(this.image);
+                     
+              }
 
-    };
+                };
 
-function playMusic(){
+              function playMusic(){
 
-       var music = Math.floor(Math.random() * playList.length)
+                   var music = Math.floor(Math.random() * playList.length)
 
-        playList[music].play();
+                    playList[music].play();
 
-    }
+                }
 
    var sunStoneIMG = $("<img>", {class: 'questionImg', src: "http://65.media.tumblr.com/4a332698df32caf496226bebee9c2130/tumblr_mjq4ceGTfJ1ryaz1eo5_250.gif"});
    var norseGodsIMG = $("<img>", {class: 'questionImg', src: "https://a2ua.com/odin/odin-003.jpg"});
@@ -154,42 +155,42 @@ function playMusic(){
     // =======================================================================================================================================
 
 
-    var sunStone= new question("What was the name of this mysterious navigation aid that helped vikings navigate the sea?", ['Eye of Thundera', 'Sunstone', 
-        'Jelling Stone', 'Runestone'], 'Sunstone', sunStoneIMG);
+var sunStone= new question("What was the name of this mysterious navigation aid that helped vikings navigate the sea?", ['Eye of Thundera', 'Sunstone', 
+  'Jelling Stone', 'Runestone'], 'Sunstone', sunStoneIMG);
 
-    var norseGods = new question("Who was the cheiftan of the Viking Gods?", [
-        'Zues', 'Thor', 'Loki', 'Odin'], 'Odin', norseGodsIMG);
+var norseGods = new question("Who was the cheiftan of the Viking Gods?", [
+  'Zues', 'Thor', 'Loki', 'Odin'], 'Odin', norseGodsIMG);
 
-    var origin = new question("Where did the Vikings come from?",
-        ["Northumbria", 'Scandinavia', 'Romania', 'Germania'], 'Scandinavia', originIMG);
+var origin = new question("Where did the Vikings come from?",
+  ["Northumbria", 'Scandinavia', 'Romania', 'Germania'], 'Scandinavia', originIMG);
 
-    var vikingKing = new question("Who is the notorious viking king that the series on the history chanel, Vikings, is based on?",
-        ['Sweyn Forkbeard', 'Leif Erickson', 'Ragnar Lothbrok', 'Ivar the Boneless'], 'Ragnar Lothbrok', vikingKingIMG);
+var vikingKing = new question("Who is the notorious viking king that the series on the history chanel, Vikings, is based on?",
+  ['Sweyn Forkbeard', 'Leif Erickson', 'Ragnar Lothbrok', 'Ivar the Boneless'], 'Ragnar Lothbrok', vikingKingIMG);
 
-    var atSea = new question("How did Vikings know that land was near?", ['Used a small telescope', 'Waited at sea and sent a boat', 'Sent a raven to see if it would fly back', 'Google Maps'], 'Sent a raven to see if it would fly back', atSeaIMG); 
-        
+var atSea = new question("How did Vikings know that land was near?", ['Used a small telescope', 'Waited at sea and sent a boat', 'Sent a raven to see if it would fly back', 'Google Maps'], 'Sent a raven to see if it would fly back', atSeaIMG); 
+  
 
-    var ragnarok = new question("What does Ragnarok mean?",
-        ['Doom of the gods', 'Birth of the gods', 'Armageddon', 'Apocalypse'], 'Doom of the gods', ragnarokIMG);
+var ragnarok = new question("What does Ragnarok mean?",
+  ['Doom of the gods', 'Birth of the gods', 'Armageddon', 'Apocalypse'], 'Doom of the gods', ragnarokIMG);
 
-    var heathenArmy = new question("Which one of Ragnar's sons leads the Great Heathen Army attack on King Ecbert of Wessex(England)?",
-        ['Ivar the Boneless', 'Bjorn Ironside', 'Sigurd Snake-in-the-Eye', 'Halfdan Ragnarsson'], 'Ivar the Boneless', heathenArmyIMG);
+var heathenArmy = new question("Which one of Ragnar's sons leads the Great Heathen Army attack on King Ecbert of Wessex(England)?",
+  ['Ivar the Boneless', 'Bjorn Ironside', 'Sigurd Snake-in-the-Eye', 'Halfdan Ragnarsson'], 'Ivar the Boneless', heathenArmyIMG);
 
-    var etymology = new question("Which one of these everyday words stems from Old Norse (Northern European)?",
-        ['dinosaur', 'maximum', 'anger', 'armada'], 'anger', etymologyIMG);
+var etymology = new question("Which one of these everyday words stems from Old Norse (Northern European)?",
+  ['dinosaur', 'maximum', 'anger', 'armada'], 'anger', etymologyIMG);
 
-    var godsLive = new question("Where did Viking gods live?",
-        [ 'The Marvel Universe', 'Midgard', 'Valhalla', 'Asgard'], 'Asgard', godsLiveIMG);
+var godsLive = new question("Where did Viking gods live?",
+  [ 'The Marvel Universe', 'Midgard', 'Valhalla', 'Asgard'], 'Asgard', godsLiveIMG);
 
-    var berzerker = new question("What is the name of a viking warrior known to be driven with intense rage and fight without armor?", [ 'brute', 'berzerker', 'valkyrie', 'loony'], 'berzerker', berzerkerIMG
-        );
+var berzerker = new question("What is the name of a viking warrior known to be driven with intense rage and fight without armor?", [ 'brute', 'berzerker', 'valkyrie', 'loony'], 'berzerker', berzerkerIMG
+  );
 
 
     questions = [sunStone, norseGods, origin, vikingKing, atSea, ragnarok, heathenArmy, etymology, godsLive, berzerker ];
 
 
 
-displayResults = function(){
+    displayResults = function(){
 
         choice1.empty();
         choice2.html("Correct: " + wins);
@@ -200,8 +201,8 @@ displayResults = function(){
         
     }
 
- function shuffleArray(array) {
-        for (var i = array.length - 1; i > 0; i--) {
+    function shuffleArray(array) {
+       for (var i = array.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
             var temp = array[i];
             array[i] = array[j];
@@ -214,7 +215,7 @@ displayResults = function(){
 
 
 
-function nextQuestion(){
+    function nextQuestion(){
 
         console.log('next question')
         console.log('question index: ' + questionIndex)
@@ -222,14 +223,14 @@ function nextQuestion(){
 
         if (questionIndex == questions.length) {
             
-            showTime.hide();
+            // showTime.hide();
             questionsElement.html("Game Over!")
 
-           
+            start.show();
 
-
+            start.text('Click Here To Play again');
             displayResults();
-            playAgain.show();
+            // playAgain.show();
            
           //     playAgain.on('click', function(){
 
@@ -322,7 +323,7 @@ function nextQuestion(){
 
                 currentQuestion = questions[questionIndex];
 
-                start.hide();
+                 start.hide();
                 nextQuestion();
 
                 choice.show();
@@ -333,6 +334,8 @@ function nextQuestion(){
             });
 
             playAgain.on('click', function(){
+
+
 
                 wins = 0;
                 losses = 0;
