@@ -45,3 +45,12 @@ button {
     top: 11pc;
     left: -11pc;v
 }
+
+section  {
+  height: 429px;
+}
+
+#portfolio img {
+  width: 360px;
+  height: 240px;
+}

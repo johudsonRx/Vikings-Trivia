@@ -197,8 +197,6 @@ var berzerker = new question("What is the name of a viking warrior known to be d
         choice3.html("Incorrect: " + losses);
         choice4.empty();
 
-
-        
     }
 
     function shuffleArray(array) {
@@ -277,8 +275,9 @@ var berzerker = new question("What is the name of a viking warrior known to be d
             if($(this).data('choice') == currentQuestion.answer){
                 // right answer logic
                 
+
                 timeRemaining.html("Correct!");
-            
+                
 
  
                 wins ++;
@@ -292,7 +291,7 @@ var berzerker = new question("What is the name of a viking warrior known to be d
 
         // logic for incorrect answer
             }else {
-                // wrong answer logic
+                
     
                 timeRemaining.html("Wrong Answer!");
 
@@ -333,24 +332,7 @@ var berzerker = new question("What is the name of a viking warrior known to be d
 
             });
 
-            playAgain.on('click', function(){
-
-
-
-                wins = 0;
-                losses = 0;
-                questionAnswered = false;
-
-                questions = shuffleArray(questions);
-
-                currentQuestion = questions[questionIndex];
-
-                start.hide();
-                nextQuestion();
-
-                choice.show();
-
-          });
+           
 
     
     console.log(triviaTheme1);
